@@ -11,10 +11,10 @@
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
-||ocsp.apple.com^
-||ocsp2.apple.com^
-||valid.apple.com^
-||crl.apple.com^
-||certs.apple.com^
-||appattest.apple.com^
-||vpp.itunes.apple.com^
+||ocsp.apple.com^$important
+||ocsp2.apple.com^$important
+||valid.apple.com^$important
+||crl.apple.com^$important
+||certs.apple.com^$important
+||appattest.apple.com^$important
+||vpp.itunes.apple.com^$important
