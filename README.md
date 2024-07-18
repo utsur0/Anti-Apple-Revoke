@@ -31,8 +31,6 @@ vpp.itunes.apple.com
 ### Why Revoked = Reinstall?
  Its because of the way modern certificates function. Apple stores all the revoked certificates' serial numbers in a "trust store"  on your device and prevents you from resetting this unless you ***restore***.
 
-Want a bit more of an explanation on certificates? See:  **How Does It Work?**
-
 ---
 
 # How to Use 
@@ -42,13 +40,9 @@ The `.txt` should be used with services like [PiHole]() or [Ad Guard Home]() to 
 
 
 ## How Does It Work?
-Simply put certificates have two states: `valid` and `expired`. However sometimes a certificate need blocked from use before expiration (say if private keys get leaked, usage changes, or YOU STOP PAYING A MULTI-BILLION DOLLAR CORPORATION $100/year TO INSTALL YOUR CODE. 
+Simply put certificates have two states: `valid` and `expired`. However sometimes a certificate need blocked from use before expiration (say if private keys get leaked, usage changes, or you stop paying Apple $100/year. This is called **REVOCATION**. 
 
-This is called **REVOCATION**. 
-
-Due to certificates not having a built-in revocation there are two ***active*** ways to revoke certificates [**Certificate Revocation Lists (CRLs)**](https://en.wikipedia.org/wiki/Certificate_revocation_list) and [**Online Certificate Status Protocol (OCSP)**](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol).
-
-> As you can see above, both are in use for codesigning on iOS/iPadOS/tvOS devices.
+Due to certificates not having a built-in revocation there are two ***active*** ways to revoke certificates [**Certificate Revocation Lists (CRLs)**](https://en.wikipedia.org/wiki/Certificate_revocation_list) and [**Online Certificate Status Protocol (OCSP)**](https://en.wikipedia.org/wiki/Online_Certificate_Status_Protocol). Both are in use for codesigning on iOS/iPadOS/tvOS devices.
 
 #### CRLs vs OCSP
 CRLs are static lists (of serial numbers) detailing invalid certificates and require clients to download and store these while OCSP provides on-demand, dynamic validation through a request-response system.
